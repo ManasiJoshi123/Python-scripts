@@ -1,0 +1,34 @@
+TASK 1: Write a Python program that:
+1.   Opens and reads a text file named sample.txt.
+2.   Prints its content line by line.
+SOLUTION: 
+--sample.txt file
+this is sample text file
+it contains multiple lines
+--pythonfile
+file1=open('sample.txt','r')
+reading_file = file1.read()
+print(reading_file)
+--output
+this is sample text file
+it contains multiple lines
+
+Process finished with exit code 0
+
+TASK 2:  Write a Python program that:
+1.   Takes user input and writes it to a file named output.txt.
+2.   Appends additional data to the same file.
+3.   Reads and displays the final content of the file.
+SOLUTION: 
+with open("output.txt", "w") as file:
+    data = input("Enter some text to write to the file: ")
+    file.write(data + "\n")
+
+    with open('output.txt', 'a') as file:
+        data1 = input("Enter some text to write to the file: ")
+        file.write(data1)
+
+with open("output.txt", "r") as file:
+    content = file.read()
+    print("\nFinal content of output.txt:\n")
+    print(content)
